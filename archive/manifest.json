@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+    "name": "subscribe",
+    "version": "1.0",
+    "description": "subscribe feed to tiny-tiny-RSSReader.",
+    "icons": {
+	"48": "/icons/icons8-tag-96.png"
+    },
+    "permissions": [
+        "tabs",
+	"activeTab",
+        "storage",
+	"http://*/*",
+	"https://*/*" ,
+        "<all_urls>"
+    ],
+    
+    "browser_action": {
+	"default_title": "subscribe feed to tiny-tiny-RSSReader",
+	"default_popup": "/popup/popup.html",
+	"browser_style": true,
+	"default_icon": {
+	    "48": "/icons/icons8-tag-96.png"
+	}
+    },
+    "options_ui": {
+	"page": "/options/options.html"
+    },
+    
+    "background": {
+	"scripts": ["/js/background.js"],
+	"persistent": true
+    }
+}

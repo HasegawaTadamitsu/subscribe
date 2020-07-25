@@ -1,0 +1,15 @@
+body {
+    width: 460px;
+    padding: 2em;
+}
+
+div.input_div {
+    width: 380px;
+    background-color:lightgray;
+}
+input {
+    width: 270px;
+}
+label {
+    width: 100px;
+}
