@@ -12,7 +12,7 @@ async function get_rss_url(doc){
 	var tmp = links.item(i);
 	if ( tmp.rel == "alternate" &&
 	     tmp.type =="application/rss+xml" ){
-	    console.log(i,tmp.rel,tmp.relList,tmp.type,tmp.href,tmp.title);
+//	    console.log(i,tmp.rel,tmp.relList,tmp.type,tmp.href,tmp.title);
 	    rss_url = tmp.href;
 	    break;
 	}
@@ -23,9 +23,8 @@ async function get_rss_url(doc){
 }
 
 async function exec_from_msg (doc){
-    console.log("Message from the other script:");
     var rss_url = get_rss_url(document)
-    console.log("rss_url" + rss_url.rss_url);
+    console.log("rss_url:" + rss_url.rss_url);
     return rss_url;
 }
 
