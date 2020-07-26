@@ -4,7 +4,7 @@
     "version": "1.0",
     "description": "subscribe feed to tiny-tiny-RSSReader.",
     "icons": {
-	"48": "/icons/icons8-tag-96.png"
+	"96": "/icons/icons8-tag-96.png"
     },
     "permissions": [
         "tabs",
@@ -20,7 +20,7 @@
 	"default_popup": "/popup/popup.html",
 	"browser_style": true,
 	"default_icon": {
-	    "48": "/icons/icons8-tag-96.png"
+	    "96": "/icons/icons8-tag-96.png"
 	}
     },
     "options_ui": {
