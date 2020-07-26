@@ -12,6 +12,10 @@ function bag_clear(){
     browser.browserAction.setBadgeText({
 	    text: ""
     });
+    browser.contextMenus.update(
+	"subscribe",{
+	    enabled: false
+	});
 }
 
 async function updateTab(tabs) {
@@ -51,6 +55,10 @@ async function updateTab(tabs) {
 	browser.browserAction.setBadgeText({
 	    text: "RSS"
 	});
+	browser.contextMenus.update(
+	    "subscribe",{
+		enabled: true
+	    });
     }
 }
 
@@ -60,12 +68,43 @@ async function updateActiveTab(){
     updateTab(gettingActiveTab);
 }
 
+function onCreated() {
+  if (browser.runntime.lastError) {
+    console.log(`Error: ${browser.runtime.lastError}`);
+  } else {
+    console.log("Item created successfully");
+  }
+}
+
+function subscribe(){
+    console.log("subscribe start");
+}
+
+
+
+
 
 console.log("start background");
 browser.tabs.onUpdated.addListener(updateActiveTab);
 browser.tabs.onActivated.addListener(updateActiveTab);
 browser.windows.onFocusChanged.addListener(updateActiveTab);
 updateActiveTab();
+
+
+browser.contextMenus.create({
+  id: "subscribe",
+  title: browser.i18n.getMessage("menuItemSubscribe"),
+  contexts: ["all"],
+}, onCreated);
+
+browser.contextMenus.onClicked.addListener((info, tab) => {
+  switch (info.menuItemId) {
+    case "subscribe":
+      subscribe();
+      break;
+  }
+});
+
 console.log("end background");
 
 

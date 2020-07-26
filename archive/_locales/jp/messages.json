@@ -1,0 +1,16 @@
+{
+  "extensionName": {
+    "message": "subscribe feed",
+    "description": "subscribe feed to TTRSS."
+  },
+
+  "extensionDescription": {
+    "message": "subscribe feed to Tiny-tiny-RSS.",
+    "description": "subscribe feed to Tiny-tiny-RSS."
+  },
+
+  "menuItemSubscribe": {
+    "message": "subscribe",
+    "description": "subscribe feed."
+  }
+}

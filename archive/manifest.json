@@ -1,8 +1,9 @@
 {
     "manifest_version": 2,
-    "name": "subscribe",
+    "name": "__MSG_extensionName__",
+    "description": "__MSG_extensionDescription__",
     "version": "1.0",
-    "description": "subscribe feed to tiny-tiny-RSSReader.",
+    "default_locale": "jp",
     "icons": {
 	"96": "/icons/icons8-tag-96.png"
     },
@@ -12,6 +13,7 @@
         "storage",
 	"http://*/*",
 	"https://*/*" ,
+	"contextMenus",
         "<all_urls>"
     ],
     
