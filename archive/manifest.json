@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "__MSG_extensionName__",
     "description": "__MSG_extensionDescription__",
-    "version": "1.01",
+    "version": "1.1",
     "default_locale": "jp",
     "icons": {
 	"96": "/icons/icons8-tag-96.png"
