@@ -2,8 +2,8 @@
     "manifest_version": 2,
     "name": "__MSG_extensionName__",
     "description": "__MSG_extensionDescription__",
-    "version": "1.1",
-    "default_locale": "jp",
+    "version": "1.2",
+    "default_locale": "ja_JP",
     "icons": {
 	"96": "/icons/icons8-tag-96.png"
     },
@@ -13,10 +13,8 @@
         "storage",
 	"http://*/*",
 	"https://*/*" ,
-	"contextMenus",
         "<all_urls>"
     ],
-    
     "browser_action": {
 	"default_title": "subscribe feed to tiny-tiny-RSSReader",
 	"default_popup": "/popup/popup.html",
@@ -32,5 +30,11 @@
     "background": {
 	"scripts": ["/js/background.js"],
 	"persistent": true
-    }
+    },
+    "browser_specific_settings": {
+	"gecko": {
+	    "strict_min_version": "65.0",
+	    "id": "{99bcf787-b5d9-4fe4-a9ff-35a58ad8aee2}"
+	}
+    } 
 }
